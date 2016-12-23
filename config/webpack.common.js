@@ -25,7 +25,7 @@ var info_paths = {
     branch: __dirname + '/../app_branch.txt',
 }
 
-var pack = JSON.parse(fs.readFileSync(info_paths.package, 'utf8').toString()  );
+var pack = JSON.parse(fs.readFileSync(info_paths.package, 'utf8').toString());
 console.log('version: ' + pack['version']);
 
 var app_version;
@@ -47,6 +47,10 @@ if (fs.existsSync(info_paths.branch)) {
 
 app_name = 'MaDIFF project, Dariusz Filipiak'
 
+let GITHUB_DEPLOY = process.env['GITHUB_DEPLOY'] &&
+    process.env.GITHUB_DEPLOY != "" ? process.env.GITHUB_DEPLOY + '/' : ''
+
+console.log('GITHUB_DEPLOY',GITHUB_DEPLOY);
 
 /*
  * Webpack Constants
@@ -54,7 +58,7 @@ app_name = 'MaDIFF project, Dariusz Filipiak'
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
     title: app_name,
-    baseUrl: '/',
+    baseUrl: '/' + GITHUB_DEPLOY,
     isDevServer: helpers.isWebpackDevServer()
 };
 
@@ -63,7 +67,7 @@ const METADATA = {
  *
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
-module.exports = function(options) {
+module.exports = function (options) {
     isProd = options.env === 'production';
     return {
 
