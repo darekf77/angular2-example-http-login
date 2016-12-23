@@ -23,4 +23,9 @@ Integration / Unit-tests
 
     npm run test
 
+Development version with mocked data
+----------
+
+    npm run server:dev:hmr
+
 
