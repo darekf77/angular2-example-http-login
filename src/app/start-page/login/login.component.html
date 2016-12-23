@@ -1,0 +1,74 @@
+
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Account</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav" style="float: right;" >
+      <li><a  href="javascript:void(0)"  (click)="smModal.show()"  id="showModal" >sign in</a></li>
+    </ul>
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
+ 
+<div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" 
+  aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <!--<div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="smModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Sign in</h4>
+      </div>-->
+      <div class="modal-body" id="modalBody" >
+
+        
+        <div class="row">
+          
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="form-group" [ngClass]="{'has-danger': smModal.incorrectCredentials}">
+                <input type="text" name="companyName" [(ngModel)]="companyName" class="form-control"
+                      placeholder="Company name"
+                      (focus)="smModal.incorrectCredentials = false" >
+                <br>
+              </div>                            
+              <div class="form-group" [ngClass]="{'has-danger': smModal.incorrectCredentials}">
+                <input type="text" name="login" [(ngModel)]="username" class="form-control"
+                      placeholder="Login"
+                      (focus)="smModal.incorrectCredentials = false" >
+                <br>
+              </div>
+
+              <div class="form-group" [ngClass]="{'has-danger': smModal.incorrectCredentials}">
+                <input type="password" placeholder="Password" name="password"
+                      [(ngModel)]="password" 
+                      (focus)="smModal.incorrectCredentials = false"
+                       class="form-control"/>
+                      <br>
+                <div class="form-control-feedback" *ngIf="smModal.incorrectCredentials"  >
+                  “Failed to sign in! Please check your credentials and try again.”
+                        {{  errorMsg }}
+                </div>
+              </div>
+              <br>
+              <button type="button" class="en-btn  en-btn-primary"
+               (click)="loginIntoSystem(password,username)">
+                sign in
+              </button>
+
+          </div>
+          
+        </div>
+        
+
+              
+
+      </div>
+    </div>
+  </div>
+</div>
