@@ -12,8 +12,9 @@ export class Login {
     modalBody = element(by.id('modalBody'));
     inputModalUsername = this.modalBody.all(by.css('[name=login]')).get(0);
     inputModalPassword = this.modalBody.all(by.css('[name=password]')).get(0);
-    inputModalCompanyName = this.modalBody.all(by.css('[name=companyName]')).get(0);
+    inputModalCompanyName = this.modalBody.all(by.css('[name=company]')).get(0);
     btSiginIn = this.modalBody.all( by.tagName('button') ).get(0);
+    btLogout = element(by.id('logoutButton'));
 
     // elementBoxLoginPassword      = element(by.tagName('ecrm-login-pass'));
     // elementBackground            = element(by.id('background'));

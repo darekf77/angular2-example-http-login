@@ -1,17 +1,26 @@
-# installation
+Demo version
+------------
 
-npm install
+[Demo version link  - gtihub pages](https://darekf77.github.io/account-login/)
+company: MaDIFF
+username: aaa
+password: ddd
 
-# e2e tests
+installation
+------------
+Script to build/run production version on localhost:3000
+I assume that server on 8080 is sending headers for cross-origin req.
 
-npm run e2e
+    sh scripts/local.sh
 
-# unit tests
+E2E tests
+---------
 
-npm run test
+    npm run e2e
 
-# production version on localhost:3000
-# I assume that server on 8080 is sending headers for cross-origin req.
+Integration / Unit-tests
+----------
 
-sh scripts/github.sh
-http-server -p 3000 dist/
+    npm run test
+
+

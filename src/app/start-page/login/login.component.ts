@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { Log, Level } from 'ng2-logger/ng2-logger';
 const log = Log.create('bs4-table');
+import { AppState } from '../../app.service';
 
 import { LOGIN_STATE, LoginService, User } from './model';
 
@@ -20,11 +21,14 @@ export class LoginComponent implements OnInit {
 
     errorMsg: string = '';
     password: string = '';
-    companyName: string = '';
+    company: string = '';
+    get name() {
+        return this.appState.name;
+    }
     
     @ViewChild('smModal') smModal: HTMLElement;
 
-    constructor(private login: LoginService, private router: Router) {
+    constructor(private login: LoginService, private router: Router, private appState: AppState) {
 
     }
 

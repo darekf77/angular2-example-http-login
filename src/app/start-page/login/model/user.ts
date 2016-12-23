@@ -1,5 +1,5 @@
 export interface User {
-    companyName?: string;
+    companyName: string;
     rememberMe?: boolean;
     password: string;
     username: string;

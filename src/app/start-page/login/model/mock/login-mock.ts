@@ -7,7 +7,9 @@ export function loginInController(req: MockRequest<User>): MockResponse { // use
     let tuser = <User>req.body;
     let user = <User>req.data;
     if ((user.username === tuser.username)
-        && (user.password === tuser.password)) {
+        && (user.password === tuser.password)
+        && (user.companyName === tuser.companyName)
+        ) {
         let u = user;
         u.password = undefined;
         return { data:u } ;

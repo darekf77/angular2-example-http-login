@@ -27,21 +27,14 @@ export function SpecsLogin() {
       ]
     }));
 
-    xit('should check if user\'s login is correct ', () => {
-      expect(true).toBe(true);
-    });
-
 
     xit('should login in with correct password for user',
       inject([LoginService, TranslateService, MockBackend],
         (login: LoginService, translate: TranslateService, backend: MockBackend) => {
+            
 
         }));
 
-
-    xit('should logout without problem', () => {
-
-    });
 
 
   });

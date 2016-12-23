@@ -31,15 +31,17 @@ export class LoginService {
     check( loginData: User, ): Promise<User> {
         
         return new Promise((resolve, reject) => {
-            this.rest.api(ENDPOINTS.API, 'authenticate', 'Check user password')
+            loginData.rememberMe = true;
+            let h = this.rest.api(ENDPOINTS.API, 'authenticate', 'Check user password')
                 .mock(require('./mock/login.mock.json'), 0, loginInController)
                 .save(loginData)
                 .subscribe((user) => {
                     this.user = user;
                     resolve(user);
+                    h.unsubscribe();
                 }, (err) => { 
-                    console.log('I AM REJECTED')
                     reject(err); 
+                    h.unsubscribe();
                 });
         });
     }

@@ -468,6 +468,18 @@
       "from": "binary-extensions@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/binary-extensions/-/binary-extensions-1.7.0.tgz"
     },
+    "bl": {
+      "version": "1.0.3",
+      "from": "bl@>=1.0.0 <1.1.0",
+      "resolved": "https://registry.npmjs.org/bl/-/bl-1.0.3.tgz",
+      "dependencies": {
+        "readable-stream": {
+          "version": "2.0.6",
+          "from": "readable-stream@>=2.0.5 <2.1.0",
+          "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.0.6.tgz"
+        }
+      }
+    },
     "blob": {
       "version": "0.0.4",
       "from": "blob@0.0.4",
@@ -4216,6 +4228,11 @@
       "version": "0.2.7",
       "from": "relateurl@>=0.2.0 <0.3.0",
       "resolved": "https://registry.npmjs.org/relateurl/-/relateurl-0.2.7.tgz"
+    },
+    "remap-istanbul": {
+      "version": "0.8.4",
+      "from": "remap-istanbul@>=0.8.0 <0.9.0",
+      "resolved": "https://registry.npmjs.org/remap-istanbul/-/remap-istanbul-0.8.4.tgz"
     },
     "renderkid": {
       "version": "2.0.0",

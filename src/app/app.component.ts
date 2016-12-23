@@ -37,7 +37,11 @@ require('!style!css!material-design-icons/iconfont/material-icons.css');
 export class App {
     angularclassLogo = 'assets/img/angularclass-avatar.png';
     loading = false;
-    name = 'Account';
+
+    get name() {
+        return this.appState.name;
+    }
+    
     url = 'https://madiff.com';
     viewContainerRef;
 
@@ -45,7 +49,7 @@ export class App {
         public appState: AppState,
         viewContainerRef: ViewContainerRef) {
         this.viewContainerRef = viewContainerRef;
-
+        appState.name = 'Account'
 
         if ('production' === ENV) {
             Log.setProductionMode();
@@ -67,6 +71,7 @@ export class App {
         } else {
             Resource.setMockingMode(MockingMode.LIVE_BACKEND_ONLY);
         }
+        
 
 
 
