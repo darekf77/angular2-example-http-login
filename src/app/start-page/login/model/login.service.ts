@@ -11,7 +11,7 @@ export class LoginService {
     private user: User = <User>{};
 
     constructor(private rest: Resource<ENDPOINTS, User, User[]>) {
-        this.rest.add(ENDPOINTS.API, 'users', 'LOGIN');
+        this.rest.add(ENDPOINTS.API, 'authenticate', 'LOGIN');
     }
 
     getLoggedInUser(): User {
@@ -31,7 +31,7 @@ export class LoginService {
     check( loginData: User, ): Promise<User> {
         
         return new Promise((resolve, reject) => {
-            this.rest.api(ENDPOINTS.API, 'users', 'Check user password')
+            this.rest.api(ENDPOINTS.API, 'authenticate', 'Check user password')
                 .mock(require('./mock/login.mock.json'), 0, loginInController)
                 .save(loginData)
                 .subscribe((user) => {

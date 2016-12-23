@@ -20,7 +20,7 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState } from './app.service';
 
 import { Ng2BootstrapModule, ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { EnCRMComponentsModule } from 'ng2-encrm-components';
+
 import { SharedModule } from './shared/shared.module';
 import { StartPageModule } from './start-page/start-page.module';
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -54,7 +54,6 @@ const APP_PROVIDERS = [
         FormsModule,
         // third parties
         AgmCoreModule.forRoot(),
-        EnCRMComponentsModule,
         Ng2BootstrapModule,
         // shared
         SharedModule,

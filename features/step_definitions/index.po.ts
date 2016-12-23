@@ -1,4 +1,4 @@
-import { Bs4BreakPoint } from 'ng2-encrm-components';
+
 
 
 import { Helpers } from '../support/helpers';
@@ -31,7 +31,7 @@ export class IndexPageObject {
     return browser.driver.manage().window().setSize(width, height);
   };
 
-  setBrowserSize(sizeUpTo: Bs4BreakPoint) {
+  setBrowserSize(sizeUpTo) {
     let width = 660;
     let height = 900;
     return browser.driver.manage().window().setSize(width, height);

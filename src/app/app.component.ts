@@ -37,8 +37,8 @@ require('!style!css!material-design-icons/iconfont/material-icons.css');
 export class App {
     angularclassLogo = 'assets/img/angularclass-avatar.png';
     loading = false;
-    name = 'Eniro CRM';
-    url = 'https://eniro.com';
+    name = 'Account';
+    url = 'https://madiff.com';
     viewContainerRef;
 
     constructor(private translate: TranslateService,
@@ -49,15 +49,15 @@ export class App {
 
         if ('production' === ENV) {
             Log.setProductionMode();
-            Resource.map(ENDPOINTS.API.toString(), 'http://localhost:8080');
+            Resource.map(ENDPOINTS.API.toString(), 'http://localhost:8080/api');
         } else {
-            Resource.map(ENDPOINTS.API.toString(), 'http://localhost:8080');
+            Resource.map(ENDPOINTS.API.toString(), 'http://localhost:8080/api');
         }
 
 
         if (!LIVE_BACKEND) {
             Resource.setMockingMode(MockingMode.MOCKS_ONLY);
-            
+
             // if ('production' === ENV) {
             //     Resource.setUrlToDocsServerAndRecreateIt('http://localhost:3103', TITLE);
             // } else if (window.location.port !== '3000') {

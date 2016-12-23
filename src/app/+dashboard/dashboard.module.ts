@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostalCodeValidatorDirective } from 'ng2-rest/ng2-rest';
 import { TranslateModule } from 'ng2-translate';
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { EnCRMComponentsModule } from 'ng2-encrm-components';
+
 import { MomentModule } from 'angular2-moment';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
@@ -44,7 +44,6 @@ const PROVIDERS: any[] = [
         TranslateModule,
         MomentModule,
         Ng2BootstrapModule,
-        EnCRMComponentsModule,
         
 
         SharedModule,

@@ -4,27 +4,21 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
-import { EnCRMComponentsModule } from 'ng2-encrm-components';
+
 
 import { TranslateModule } from 'ng2-translate';
 
 import {
     FocusDirective,
-    NoContent,
-    InputSelectComponent,
-    InputDatePickerComponent,
+    NoContent
 } from './index';
 
-import { TelephoneFormatterDirective, NumberFormatterDirective } from './input';
+
 
 @NgModule({
     declarations: [
         FocusDirective,
-        NoContent,
-        InputSelectComponent,
-        InputDatePickerComponent,
-        TelephoneFormatterDirective,
-        NumberFormatterDirective
+        NoContent
     ],
     imports:      [
         CommonModule,
@@ -32,7 +26,6 @@ import { TelephoneFormatterDirective, NumberFormatterDirective } from './input';
         TranslateModule,
         FormsModule,
         ReactiveFormsModule,
-        EnCRMComponentsModule,
         Ng2BootstrapModule
     ],
     providers:    [
@@ -41,14 +34,7 @@ import { TelephoneFormatterDirective, NumberFormatterDirective } from './input';
     exports:      [
         
         FocusDirective,
-        NoContent,
-        
-        InputSelectComponent,
-        InputDatePickerComponent,
-    
-        TelephoneFormatterDirective,
-        NumberFormatterDirective,
-        
+        NoContent        
     ]
 
 })

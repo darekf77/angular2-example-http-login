@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginComponent, LoginService } from './login';
-import { ClockDateComponent } from './clock-date';
-import { BackgroundComponent } from './background';
 
 @Component({
     selector: 'start-page',
