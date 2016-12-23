@@ -84,13 +84,6 @@ src/**/*.js.map
 /src/assets/dev
 /src/assets/dev/*
 
-features/**/*.feature
-features/**/*.js
-features/**/*.js.map
-/features/files/*.feature
-/features/files/*.json
-/features/.features.json
-
 
 /stage-mock.sh
 
