@@ -8,14 +8,10 @@ import { loginInController } from './mock';
 @Injectable()
 export class LoginService {
 
-    private user: User = <User>{};
+    private user: User;
 
     constructor(private rest: Resource<ENDPOINTS, User, User[]>) {
         this.rest.add(ENDPOINTS.API, 'authenticate', 'LOGIN');
-    }
-
-    getLoggedInUser(): User {
-        return this.user;
     }
 
     isLoggedIn(): boolean {
@@ -25,8 +21,6 @@ export class LoginService {
     logout() {
         this.user = undefined;
     }
-
-
 
     check( loginData: User, ): Promise<User> {
         

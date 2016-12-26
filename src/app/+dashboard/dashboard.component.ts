@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AppState } from '../app.service';
-
+import { LoginService } from '../start-page/login';
 
 @Component({
     moduleId: 'dashboard',
@@ -10,11 +11,18 @@ import { AppState } from '../app.service';
     styles: [require('./dashboard.component.scss')]
 })
 export class DashboardComponent implements OnInit {
-    constructor(private appState: AppState) { }
+    constructor(private login: LoginService, private router: Router) { }
 
-    get name() {
-        return this.appState.name;
+    ngOnInit() {
+        if(!this.login.isLoggedIn()) this.router.navigateByUrl('/');
     }
 
-    ngOnInit() { }
+    get isLoggedIn () {
+        return this.login.isLoggedIn();
+    }
+
+    logout() {
+        this.login.logout();
+        this.router.navigateByUrl('/');
+    }
 }

@@ -28,7 +28,7 @@ export function SpecsLogin() {
     }));
 
 
-    xit('should login in with correct password for user',
+    it('should login in with correct password for user',
       inject([LoginService, TranslateService, MockBackend],
         (login: LoginService, translate: TranslateService, backend: MockBackend) => {
             

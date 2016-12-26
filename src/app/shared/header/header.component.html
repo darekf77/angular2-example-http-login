@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">{{name}}</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav" style="float: right;" >
+      <li *ngIf="isLoggedIn"><a   id="logoutButton" href="javascript:void(0)" (click)="singOut()" >logout</a></li>
+      <li *ngIf="!isLoggedIn"><a href="javascript:void(0)" (click)="signIn()" id="showModal">sign in</a></li>
+    </ul>
+    
+  </div><!-- /.navbar-collapse -->
+</nav>

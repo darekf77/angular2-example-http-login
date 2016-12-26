@@ -10,7 +10,7 @@ import { Resource } from 'ng2-rest/ng2-rest';
 import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 
-import { LoginComponent } from './login/login.component';
+import { LoginComponent, LoginModalComponent } from './login';
 import { LoginService } from './login/model/login.service';
 import { SharedModule } from '../shared/shared.module';
 import { StartPageComponent } from './start-page.component';
@@ -18,7 +18,8 @@ import { StartPageComponent } from './start-page.component';
 @NgModule({
     declarations: [
         StartPageComponent,
-        LoginComponent
+        LoginComponent,
+        LoginModalComponent
     ],
     imports: [
         ModalModule,
@@ -33,7 +34,8 @@ import { StartPageComponent } from './start-page.component';
     providers: [LoginService, Resource],
     exports: [
         StartPageComponent,
-        LoginComponent
+        LoginComponent,
+        LoginModalComponent
     ]
 })
 export class StartPageModule {

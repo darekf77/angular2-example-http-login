@@ -7,6 +7,7 @@ import { LoginComponent, LoginService } from './login';
     styles: [require('./start-page.component.scss')]
 })
 export class StartPageComponent implements OnInit {
+
     constructor() { }
 
     ngOnInit() { }
