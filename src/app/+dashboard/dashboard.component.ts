@@ -23,6 +23,6 @@ export class DashboardComponent implements OnInit {
 
     logout() {
         this.login.logout();
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/login');
     }
 }
