@@ -35,14 +35,11 @@ require('!style!css!material-design-icons/iconfont/material-icons.css');
     template: require('./app.component.html')
 })
 export class App {
-    angularclassLogo = 'assets/img/angularclass-avatar.png';
-    loading = false;
-
+    
     get name() {
         return this.appState.name;
     }
     
-    url = 'https://madiff.com';
     viewContainerRef;
 
     constructor(private translate: TranslateService,
@@ -61,7 +58,6 @@ export class App {
 
         if (!LIVE_BACKEND) {
             Resource.setMockingMode(MockingMode.MOCKS_ONLY);
-
             // if ('production' === ENV) {
             //     Resource.setUrlToDocsServerAndRecreateIt('http://localhost:3103', TITLE);
             // } else if (window.location.port !== '3000') {
@@ -71,9 +67,6 @@ export class App {
         } else {
             Resource.setMockingMode(MockingMode.LIVE_BACKEND_ONLY);
         }
-        
-
-
 
         let userLang = navigator.language.split('-')[0]; // use navigator lang if available
         userLang = /(fr|en)/gi.test(userLang) ? userLang : 'pl';

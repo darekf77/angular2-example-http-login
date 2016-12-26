@@ -17,12 +17,5 @@ export class HeaderComponent implements OnInit {
 
     @Input() name = 'Account'
 
-    signIn() {
-        this.loginIn.next();
-    }
-    singOut() {
-        this.logout.next();
-    }
-
     ngOnInit() { }
 }

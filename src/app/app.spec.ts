@@ -21,7 +21,7 @@ import { SpecsStartPage } from './start-page/start-page.spec';
 import {
   TranslateService, TranslateLoader, TranslateStaticLoader, TranslateModule
 }
-from 'ng2-translate/ng2-translate';
+  from 'ng2-translate/ng2-translate';
 import { Resource } from 'ng2-rest/ng2-rest';
 import { ApplicationRef, ViewContainerRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -46,9 +46,15 @@ describe('App', () => {
     ]
   }));
 
+
+  it('should have hook for modal purpose', inject([App], (app: App) => {
+    expect(app.viewContainerRef).toBeDefined();
+  }));
+
   it('should have a url', inject([App], (app: App) => {
     expect(app.name).toEqual('Account');
   }));
 
   SpecsShared();
+  SpecsStartPage();
 });
