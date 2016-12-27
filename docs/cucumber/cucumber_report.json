@@ -13,7 +13,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 387537
+              "duration": 474967
             },
             "hidden": true,
             "match": {
@@ -26,7 +26,7 @@
             "name": "User on main page",
             "result": {
               "status": "passed",
-              "duration": 1969515150
+              "duration": 1956383420
             },
             "line": 6,
             "match": {
@@ -39,7 +39,7 @@
             "name": "User with opened sign in modal",
             "result": {
               "status": "passed",
-              "duration": 1092112436
+              "duration": 1116138562
             },
             "line": 10,
             "match": {
@@ -52,7 +52,7 @@
             "name": "User enterd username \"aaa\" , password \"ddd\" and company name \"MaDIFF\"",
             "result": {
               "status": "passed",
-              "duration": 329853921
+              "duration": 293835738
             },
             "line": 11,
             "match": {
@@ -65,7 +65,7 @@
             "name": "Is redireced to dashboad",
             "result": {
               "status": "passed",
-              "duration": 28746808
+              "duration": 27182313
             },
             "line": 12,
             "match": {
@@ -78,7 +78,7 @@
             "name": "User use logout button",
             "result": {
               "status": "passed",
-              "duration": 1094569665
+              "duration": 1094344222
             },
             "line": 13,
             "match": {
@@ -91,7 +91,7 @@
             "name": "He goes back to main page",
             "result": {
               "status": "passed",
-              "duration": 6635543
+              "duration": 6508985
             },
             "line": 14,
             "match": {
@@ -103,7 +103,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 151584
+              "duration": 130143
             },
             "hidden": true,
             "match": {
@@ -134,7 +134,7 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 72421
+              "duration": 52573
             },
             "hidden": true,
             "match": {
@@ -147,7 +147,7 @@
             "name": "User on main page",
             "result": {
               "status": "passed",
-              "duration": 40935928
+              "duration": 46138423
             },
             "line": 6,
             "match": {
@@ -160,7 +160,7 @@
             "name": "User with opened sign in modal",
             "result": {
               "status": "passed",
-              "duration": 1065476809
+              "duration": 1063207444
             },
             "line": 18,
             "match": {
@@ -173,7 +173,7 @@
             "name": "User enterd username \"111\" , password \"111\" and company name \"111\"",
             "result": {
               "status": "passed",
-              "duration": 230492908
+              "duration": 226319889
             },
             "line": 19,
             "match": {
@@ -186,7 +186,7 @@
             "name": "Error appears in modal form",
             "result": {
               "status": "passed",
-              "duration": 39690198
+              "duration": 35648327
             },
             "line": 20,
             "match": {
@@ -198,7 +198,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 66532
+              "duration": 37933
             },
             "hidden": true,
             "match": {

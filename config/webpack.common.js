@@ -39,11 +39,6 @@ if (fs.existsSync(info_paths.branch)) {
     app_branch = fs.readFileSync(info_paths.branch, 'utf8').toString().trim().toUpperCase();
 }
 
-// if (app_version && app_branch) {
-//     app_name = 'Madiss ' + app_version + '/' + app_branch.trim()    
-// } else {
-//     app_name = 'Eniro CRM v. LOCAL';
-// }
 
 app_name = 'MaDIFF project, Dariusz Filipiak'
 

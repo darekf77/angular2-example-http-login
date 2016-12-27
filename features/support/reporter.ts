@@ -24,7 +24,7 @@ module.exports = function () {
         jsonFile: targetJson,
         output: `${outputDir}/index.html`,
         reportSuiteAsScenarios: true,
-        name: `Eniro CRM v. ${name}`
+        name: `${name}`
     };
 
     this.After(function (scenario, callback) {
