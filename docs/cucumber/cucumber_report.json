@@ -1,0 +1,229 @@
+[
+  {
+    "description": "\tAccount login page",
+    "elements": [
+      {
+        "id": "account;user-is-able-to-login-into-system-with-valid-data-and-logout",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "User is able to login into system with valid data and logout",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before ",
+            "result": {
+              "status": "passed",
+              "duration": 387537
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/support/hooks.ts:3"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "User on main page",
+            "result": {
+              "status": "passed",
+              "duration": 1969515150
+            },
+            "line": 6,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:8"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "User with opened sign in modal",
+            "result": {
+              "status": "passed",
+              "duration": 1092112436
+            },
+            "line": 10,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:20"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "User enterd username \"aaa\" , password \"ddd\" and company name \"MaDIFF\"",
+            "result": {
+              "status": "passed",
+              "duration": 329853921
+            },
+            "line": 11,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:30"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "Is redireced to dashboad",
+            "result": {
+              "status": "passed",
+              "duration": 28746808
+            },
+            "line": 12,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:51"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "User use logout button",
+            "result": {
+              "status": "passed",
+              "duration": 1094569665
+            },
+            "line": 13,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:56"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "He goes back to main page",
+            "result": {
+              "status": "passed",
+              "duration": 6635543
+            },
+            "line": 14,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:66"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 151584
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/support/reporter.ts:30"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@dev",
+            "line": 8
+          },
+          {
+            "name": "@usability",
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "account;user-gets-error-trying-login-with-incorrect-data",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "User gets error trying login with incorrect data",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before ",
+            "result": {
+              "status": "passed",
+              "duration": 72421
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/support/hooks.ts:3"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "User on main page",
+            "result": {
+              "status": "passed",
+              "duration": 40935928
+            },
+            "line": 6,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:8"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "User with opened sign in modal",
+            "result": {
+              "status": "passed",
+              "duration": 1065476809
+            },
+            "line": 18,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:20"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "User enterd username \"111\" , password \"111\" and company name \"111\"",
+            "result": {
+              "status": "passed",
+              "duration": 230492908
+            },
+            "line": 19,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:30"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "Error appears in modal form",
+            "result": {
+              "status": "passed",
+              "duration": 39690198
+            },
+            "line": 20,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/step_definitions/login/login.e2e.ts:71"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 66532
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/darek/ProjectsMac/madiff/frontend/features/support/reporter.ts:30"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@dev",
+            "line": 16
+          },
+          {
+            "name": "@usability",
+            "line": 16
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "account",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Account",
+    "tags": [],
+    "uri": "/Users/darek/ProjectsMac/madiff/frontend/features/files/login.feature"
+  }
+]

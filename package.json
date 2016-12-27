@@ -22,6 +22,7 @@
     "clean:start": "npm start",
     "docker": "docker",
     "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/",
+    "pree2e": "npm run rimraf test/results/cucumber/screenshot",
     "e2e": "npm run protractor",
     "e2e:live": "npm run e2e -- --elementExplorer",
     "e2e:xvfb": "xvfb-run -s \"-screen 0 1920x1080x16\" npm run protractor",

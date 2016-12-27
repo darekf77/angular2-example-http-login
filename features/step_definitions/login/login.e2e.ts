@@ -8,7 +8,11 @@ module.exports = function () {
   this.Given(/^User on main page$/, (callback) => {
     // Write code here that turns the phrase above into concrete actions
     browser.get(login.urlBASE).then(() => {
-      expect(browser.getCurrentUrl()).to.eventually.equal(login.urlBASE + '/').and.notify(callback);
+      browser.getCurrentUrl().then(url => {
+        url = url.charAt(url.length - 1) === '/' ? url.slice(0, url.length - 1) : url;
+        expect(url).to.equal(login.urlBASE);
+        callback();
+      })
     })
 
   });
@@ -63,5 +67,10 @@ module.exports = function () {
     // Write code here that turns the phrase above into concrete actions
     expect(browser.getCurrentUrl()).to.eventually.equal(login.urlLogin).and.notify(callback);
   });
+
+  this.Then(/^Error appears in modal form$/, callback => {
+    let error = login.errorMessage;
+    expect(error.isDisplayed()).to.eventually.be.true.and.notify(callback);
+  })
 
 };

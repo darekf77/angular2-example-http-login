@@ -12,4 +12,10 @@ export class StartPageComponent implements OnInit {
 
     ngOnInit() { }
 
+    openModal: boolean = false;
+    openModalPopUp() {
+        this.openModal = !this.openModal;
+        setTimeout(() => this.openModal = true)
+    }
+
 }

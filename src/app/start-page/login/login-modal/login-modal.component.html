@@ -1,13 +1,12 @@
-<div class="row">
+<div class="row error-message">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="form-control-feedback" style="color:red;" *ngIf="modal.incorrectCredentials"> 
-            {{ 'messages.errors.login' | translate }}
+        <div class="form-control-feedback" style="color:red;" *ngIf="modal.incorrectCredentials" id="modalFormError" > 
+            <h5>Failed to sign in! Please check your credentials and try again.</h5>            
         </div>
     </div>  
 </div>
 
-<div class="row">
-   <span *ngIf="loginForm" > {{loginForm.form | json}}</span>
+<div class="row">   
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <form  #loginForm="ngForm" *ngIf="formFields && formFields.length > 0" (ngSubmit)="submit(loginForm.form.value)" >
             <div *ngFor="let field of formFields" class="form-group" [ngClass]="{'has-danger': modal.incorrectCredentials}">

@@ -6,6 +6,10 @@ company: MaDIFF
 username: aaa
 password: ddd
 
+[E2E tests results](https://darekf77.github.io/account-login/cucumber)
+
+[Unit-test coverage](https://darekf77.github.io/account-login/coverage)
+
 installation
 ------------
 Script to build/run production version on localhost:3000

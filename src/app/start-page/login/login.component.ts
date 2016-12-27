@@ -16,14 +16,17 @@ import { LoginService, User } from './model';
 export class LoginComponent implements OnInit {
 
     @Input() set openModal(v) {
-        if(v) this.modal.show();
+        if (v) {
+            log.i('show modal');
+            this.modal.show();
+        }
     }
     @ViewChild('modal') modal: any;
 
     constructor(private login: LoginService, private router: Router) { }
 
     ngOnInit() {
-        if(this.login.isLoggedIn()) this.router.navigateByUrl('/dashboard');
+        if (this.login.isLoggedIn()) this.router.navigateByUrl('/dashboard');
     }
 
     loginIntoSystem(data) {

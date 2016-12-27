@@ -17,7 +17,7 @@ interface FormField {
 })
 export class LoginModalComponent implements OnInit {
 
-    @Input() modal: any;
+    @Input() modal: any = {};
     @Output() formSubmit: EventEmitter<{}> = new EventEmitter<{}>();
 
     constructor() { }
