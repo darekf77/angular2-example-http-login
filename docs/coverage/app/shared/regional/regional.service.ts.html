@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/shared/regional/regional.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">app/shared/regional/</a> regional.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.31% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.14% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">41.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/24</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable, Inject } from '@angular/core';
+import { Observable } from 'rxjs';
+&nbsp;
+import { Resource } from 'ng2-rest/ng2-rest';
+&nbsp;
+import { ENDPOINTS } from '../../app.component';
+import { RegionalData } from './regional-data';
+import { getByPostcode } from './mock';
+import { Category } from './category';
+&nbsp;
+const modelName = '/regional/data';
+&nbsp;
+&nbsp;
+interface RegionaServiceInterface {
+    countries: () =&gt; Observable&lt;RegionalData[]&gt;;
+    voivodeships: (countryId: number) =&gt; Observable&lt;RegionalData[]&gt;;
+    voivodeship: (postOfficeId: number) =&gt; Observable&lt;RegionalData&gt;;
+    counties: (voivodeshipId: number) =&gt; Observable&lt;RegionalData[]&gt;;
+    countiesByPostCode: (postcode: string) =&gt; Observable&lt;RegionalData[]&gt;;
+    communies: (countyId: number) =&gt; Observable&lt;RegionalData[]&gt;;
+    communiesByPostCode: (postcode: string) =&gt; Observable&lt;RegionalData[]&gt;;
+    cities: (city: string, postalCode?: string) =&gt; Observable&lt;RegionalData[]&gt;;
+    postOffices: (postOffice: string, postalCode?: string) =&gt; Observable&lt;RegionalData[]&gt;;
+    communiesByCityId: (cityId: number) =&gt; Observable&lt;RegionalData[]&gt;;
+    addressTypes: () =&gt; Observable&lt;RegionalData[]&gt;;
+    all: (postcode: string, countryId: number) =&gt; Observable&lt;RegionalData[]&gt;;
+}
+&nbsp;
+@Injectable()
+export class RegionalService {
+&nbsp;
+    model: RegionaServiceInterface;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    constructor(private <span class="cstat-no" title="statement not covered" >rest: Resource&lt;ENDPOINTS, RegionalData, RegionalData[]&gt;)</span></span> {
+<span class="cstat-no" title="statement not covered" >        rest.add(ENDPOINTS.API, modelName, 'REGIONAL DATA');</span>
+<span class="cstat-no" title="statement not covered" >        this.model = &lt;RegionaServiceInterface&gt;{</span>
+            countries: <span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get all countries')
+                .mock(require('./mock/countries.mock.json'), 500)
+                .query([{ caregory: Category.Country }]),
+&nbsp;
+            voivodeships: <span class="fstat-no" title="function not covered" >(countryId: number)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get all voivodeships by id of country')
+                .mock(require('./mock/voivodeships.mock.json'), 500)
+                .query([{ caregory: Category.Voivodeship, countryId }]),
+&nbsp;
+            voivodeship: <span class="fstat-no" title="function not covered" >(postOfficeId: number)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get all voivodeships by id of postoffice')
+                .mock(require('./mock/voivodeship.mock.json'), 500)
+                .get([{ caregory: Category.Voivodeship, postOfficeId }]),
+&nbsp;
+            counties: <span class="fstat-no" title="function not covered" >(voivodeshipId: number)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get counties by voivodeship id')
+                .mock(require('./mock/counties.mock.json'), 500)
+                .query([{ caregory: Category.Commune, voivodeshipId }]),
+&nbsp;
+            countiesByPostCode: <span class="fstat-no" title="function not covered" >(postcode: string)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get counties by postcode')
+                .mock(require('./mock/counties.mock.json'), 500)
+                .query([{ caregory: Category.Commune, postcode }]),
+&nbsp;
+            cities: <span class="fstat-no" title="function not covered" >(city: string, postalCode?: string)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get cities by post code')
+                .mock(require('./mock/cities-data.mock.json'), 500)
+                .query([{ caregory: Category.City, city, postalCode }]),
+&nbsp;
+            postOffices: <span class="fstat-no" title="function not covered" >(postOffice: string, postalCode?: string)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get post-offices by post code')
+                .mock(require('./mock/post-offices-data.mock.json'), 500)
+                .query([{ caregory: Category.City, postOffice, postalCode }]),
+&nbsp;
+            communies: <span class="fstat-no" title="function not covered" >(countyId: number)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get communies by county id')
+                .mock(require('./mock/communies.mock.json'), 500)
+                .query([{ caregory: Category.Commune, countyId }]),
+&nbsp;
+            communiesByPostCode: <span class="fstat-no" title="function not covered" >(postcode: string)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get communies by post code')
+                .mock(require('./mock/communies.mock.json'), 500)
+                .query([{ caregory: Category.Commune, postcode }]),
+&nbsp;
+            communiesByCityId: <span class="fstat-no" title="function not covered" >(cityId: number)</span> =&gt; <span class="cstat-no" title="statement not covered" >this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get communies by city id')
+                .mock(require('./mock/communies.mock.json'), 500)
+                .query([{ caregory: Category.Commune, cityId }]),
+&nbsp;
+            addressTypes: <span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.rest</span>
+                .api(ENDPOINTS.API, modelName, 'Get all addres types')
+                .mock(require('./mock/address-types.mock.json'), 500)
+                .query([{ caregory: Category.AddressType }]),
+&nbsp;
+            all: <span class="fstat-no" title="function not covered" >(postcode: string, countryId: number)</span> =&gt;
+<span class="cstat-no" title="statement not covered" >                this.rest.api(ENDPOINTS.API, modelName, 'Get all of WHAT!!!! ?????? ')</span>
+                    .mock(require('./mock/regional-data.mock.json'), 500, getByPostcode)
+                    .query([{ postcode, countryId }])
+        };
+    }
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 23 2016 16:47:43 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

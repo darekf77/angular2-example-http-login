@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/shared/opening-hours/edit/edit.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">app/shared/opening-hours/edit/</a> edit.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.83% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>69/72</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.12% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>16/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.01% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>65/67</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, Input, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+&nbsp;
+import { OpeningHours } from './../shared/opening-hours.interface';
+import { OpeningHoursDataService } from './../shared/opening-hours-data.service';
+&nbsp;
+@Component({
+    selector: 'ecrm-opening-hours-edit',
+    templateUrl: './edit.component.html',
+    styleUrls: ['./edit.component.scss']
+})
+&nbsp;
+export class OpeningHoursEditComponent implements OnInit, OnDestroy {
+    @Input() elid: number;
+    @Input() openingHours: OpeningHours;
+    @Output() isSaved: EventEmitter&lt;any&gt; = new EventEmitter&lt;any&gt;();
+&nbsp;
+    protected days: string[] = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+    protected proposalOpeningHoursFrom: string = '00:00';
+    protected proposalOpeningHoursTo: string = '00:00';
+    protected proposalOpeningHoursBreakFrom: string = '00:00';
+    protected proposalOpeningHoursBreakTo: string = '00:00';
+    protected frequency: number = 0;
+    protected sub: Subscription[] = [];
+&nbsp;
+    constructor(protected openingHoursService: OpeningHoursDataService) {
+&nbsp;
+    }
+&nbsp;
+    ngOnInit() {
+        if (this.openingHours
+            &amp;&amp; this.openingHours.frequency.daily === false
+            &amp;&amp; this.openingHours.frequency.working_days === false) {
+            this.setFrequency(true, false);
+        }
+&nbsp;
+        this.setDefaultFrequency();
+    }
+&nbsp;
+    ngOnDestroy() {
+        this.sub.forEach(<span class="fstat-no" title="function not covered" >(s)</span> =&gt; <span class="cstat-no" title="statement not covered" >s.unsubscribe())</span>;
+        this.sub = [];
+    }
+&nbsp;
+    handlerProposalHoursFrom(val: string): void {
+        this.changeAllHours('from', val);
+    }
+&nbsp;
+    handlerProposalHoursTo(val: string): void {
+        this.changeAllHours('to', val);
+    }
+&nbsp;
+    handlerProposalBreakHoursFrom(val: string): void {
+        this.changeAllHours('from', val, true);
+    }
+&nbsp;
+    handlerProposalBreakHoursTo(val: string): void {
+        this.changeAllHours('to', val, true);
+    }
+&nbsp;
+    handlerFrequency(): void {
+        switch (this.frequency) {
+            case 1:
+                this.setFrequency(true, false);
+                break;
+            case 2:
+                this.setFrequency(false, true);
+                break;
+<span class="branch-2 cbranch-no" title="branch not covered" >            default:</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
+        }
+    }
+&nbsp;
+    handlerChangeSeasonDate(key: string, value: any): void {
+        switch (key) {
+            case 'beginning':
+                this.openingHours.season.beginning = new Date(value).getTime();
+                break;
+            case 'end':
+                this.openingHours.season.end = new Date(value).getTime();
+                break;
+<span class="branch-2 cbranch-no" title="branch not covered" >            default:</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
+        }
+    }
+&nbsp;
+    handlerSave(): void {
+        this.sub.push(this.openingHoursService.model.update(this.elid, this.openingHours).subscribe((res) =&gt; {
+            this.isSaved.emit({});
+        }));
+    }
+&nbsp;
+    protected validOpeningHours(value: string) {
+        let EMAIL_REGEXP = /^[0-9]{1,2}:[0-9]{2,2}$/i;
+        return EMAIL_REGEXP.test(value);
+    }
+&nbsp;
+    protected changeAllHours(key: string, value: string, isBreak: boolean = false): void {
+        if (this.validOpeningHours(value)) {
+            for (let i in this.days) {
+                let day: string = this.days[i];
+&nbsp;
+                if (!isBreak) {
+                    this.openingHours.days[day][key] = value;
+                } else {
+                    this.openingHours.days[day].break[key] = value;
+                }
+            }
+        }
+    }
+&nbsp;
+    protected setDefaultFrequency(): void {
+        if (this.openingHours.frequency.daily) {
+            this.frequency = 1;
+        }
+        else <span class="missing-if-branch" title="else path not taken" >E</span>if (this.openingHours.frequency.working_days) {
+            this.frequency = 2;
+        }
+    }
+&nbsp;
+    protected setFrequency(daily: boolean, workingDays: boolean): void {
+        this.openingHours.frequency.daily = daily;
+        this.openingHours.frequency.working_days = workingDays;
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 23 2016 16:47:43 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

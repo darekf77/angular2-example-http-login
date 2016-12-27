@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/app.module.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">app/</a> app.module.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.77% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>30/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.86% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.05% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>27/38</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { NgModule, ApplicationRef } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule, Http } from '@angular/http';
+import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+&nbsp;
+import {
+    TranslateModule,
+    TranslateLoader,
+    TranslateStaticLoader
+} from 'ng2-translate';
+/*
+ * Platform and Environment providers/directives/pipes
+ */
+import { ENV_PROVIDERS } from './environment';
+import { ROUTES, routing, appRoutingProviders } from './app.routes';
+// App is our top level component
+import { App } from './app.component';
+import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+import { AppState } from './app.service';
+&nbsp;
+import { Ng2BootstrapModule, ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { EnCRMComponentsModule } from 'ng2-encrm-components';
+import { SharedModule } from './shared/shared.module';
+import { StartPageModule } from './start-page/start-page.module';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { DashboardModule } from './+dashboard/dashboard.module';
+&nbsp;
+&nbsp;
+// Application wide providers
+const APP_PROVIDERS = [
+    ...APP_RESOLVER_PROVIDERS,
+    AppState
+];
+&nbsp;
+/**
+ * `AppModule` is the main entry point into Angular2's bootstraping process
+ */
+@NgModule({
+    bootstrap:    [App],
+    declarations: [App],
+    imports:      [
+        // import Angular's modules
+        ModalModule,
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        TranslateModule.forRoot({
+            provide:    TranslateLoader,
+            useFactory: (http: Http) =&gt; new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+            deps:       [Http]
+        }),
+        FormsModule,
+        // third parties
+        AgmCoreModule.forRoot(),
+        EnCRMComponentsModule,
+        Ng2BootstrapModule,
+        // shared
+        SharedModule,
+        // content
+        StartPageModule,
+        // routing
+        routing,
+        DashboardModule
+    ],
+    providers:    [ // expose our Services and Providers into Angular's dependency injection
+        ...ENV_PROVIDERS,
+        ...APP_PROVIDERS,
+        appRoutingProviders,
+      {provide: LocationStrategy, useClass: HashLocationStrategy}
+    ]
+})
+export class AppModule {
+    constructor(public appRef: ApplicationRef, public appState: AppState) {
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    hmrOnInit(store)</span> {
+<span class="cstat-no" title="statement not covered" >        if (!store || !store.state) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log('HMR store', store);</span>
+<span class="cstat-no" title="statement not covered" >        this.appState.state = store.state;</span>
+<span class="cstat-no" title="statement not covered" >        delete store.state;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    hmrOnDestroy(store)</span> {
+<span class="cstat-no" title="statement not covered" >        let cmpLocation       = this.appRef.components.map(<span class="fstat-no" title="function not covered" >cmp </span>=&gt; <span class="cstat-no" title="statement not covered" >cmp.location.nativeElement)</span>;</span>
+        // recreate elements
+<span class="cstat-no" title="statement not covered" >        let state             = this.appState.state;</span>
+<span class="cstat-no" title="statement not covered" >        store.state           = state;</span>
+<span class="cstat-no" title="statement not covered" >        store.disposeOldHosts = createNewHosts(cmpLocation);</span>
+        // remove styles
+<span class="cstat-no" title="statement not covered" >        removeNgStyles();</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    hmrAfterDestroy(store)</span> {
+        // display new elements
+<span class="cstat-no" title="statement not covered" >        store.disposeOldHosts();</span>
+<span class="cstat-no" title="statement not covered" >        delete store.disposeOldHosts;</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 23 2016 16:47:43 GMT+0100 (CET)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

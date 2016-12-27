@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/shared/breadcumbs/breadcumbs.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">app/shared/breadcumbs/</a> breadcumbs.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25.45% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/50</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import 'rxjs/add/operator/share';
+&nbsp;
+&nbsp;
+@Component({
+    selector: 'bs3-breadcrumbs',
+    template: require('./breadcumbs.component.html')
+})
+export class BreadcrumbsComponent {
+    static staticCrumb: any[] = [];
+    public breadcrumbsCollection: any[];
+    private <span class="cstat-no" title="statement not covered" >allInstructions: any[] = [];</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    static setStaticCrumb(routeName: string, crumb: { params: any, displayName: string })</span> {
+<span class="cstat-no" title="statement not covered" >        this.staticCrumb[routeName] = crumb;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    constructor(public <span class="cstat-no" title="statement not covered" >router: Router)</span></span> {
+        // let instructions = [];
+        // this.router.recognize('/' +
+        //     this.router.root.currentInstruction.urlPath).then(instruction =&gt; {
+        //         instructions.push(instruction);
+&nbsp;
+        //         this.breadcrumbsCollection = instructions.map((inst, index) =&gt; {
+        //             return {
+        //                 displayName: inst.component.routeData.get('displayName'),
+        //                 // as: inst.component.routeData.get('name'),
+        //                 terminal: inst.component.terminal,
+        //                 linkParams: this._getLinkParams(instructions, index)
+        //             };
+        //         });
+        //     });
+&nbsp;
+&nbsp;
+        // this.router.root.subscribe(url =&gt; {
+        //     instructions = [];
+        //     this.allInstructions = [];
+        //     this.router.recognize(url).then(instruction =&gt; {
+        //         instructions.push(instruction);
+&nbsp;
+        //         while (instruction.child) {
+        //             instruction = instruction.child;
+        //             instructions.push(instruction);
+        //         }
+&nbsp;
+&nbsp;
+        //         this.breadcrumbsCollection = instructions.map((inst, index) =&gt; {
+        //             return {
+        //                 displayName: inst.component.routeData.get('displayName'),
+        //                 parent: inst.component.routeData.get('parent'),
+        //                 // as: inst.component.routeData.get('name'),
+        //                 terminal: inst.component.terminal,
+        //                 linkParams: this._getLinkParams(instructions, index)
+        //             };
+        //         });
+&nbsp;
+&nbsp;
+        //         let parseAgain: boolean = false;
+        //         for (let item of this.breadcrumbsCollection) {
+        //             for (let param of item.linkParams) {
+        //                 if (typeof param === 'object') {
+        //                     parseAgain = true;
+        //                     break;
+        //                 }
+        //             }
+        //             this.getCrumbsRecursively(router.generate(item.linkParams));
+        //         }
+        //         // console.log('---------- all instructions -----------');
+        //         // console.log(this.allInstructions);
+&nbsp;
+        //         if (parseAgain) {
+        //             instructions = [];
+        //             for (let n = this.allInstructions.length; n &gt; 0; n--) {
+        //                 instructions.push(this.allInstructions[n - 1]);
+        //             }
+        //             console.log(instructions);
+        //             let tmpBreadcrumbs: any[] = [];
+        //             this.breadcrumbsCollection = this.allInstructions.map((inst, index) =&gt; {
+        //                 return {
+        //                     displayName: this.getDisplayName(inst),
+        //                     parent: inst.component.routeData.get('parent'),
+        //                     // as: inst.component.routeData.get('name'),
+        //                     terminal: inst.component.terminal,
+        //                     linkParams: this._getLinkParams(this.allInstructions, index)
+        //                 };
+        //             });
+&nbsp;
+        //             for (let n = this.breadcrumbsCollection.length; n &gt; 0; n--) {
+        //                 tmpBreadcrumbs.push(this.breadcrumbsCollection[n - 1]);
+        //             }
+        //             this.breadcrumbsCollection = tmpBreadcrumbs;
+&nbsp;
+        //             // console.log('------- new breadcrumbs');
+        //             // console.log(this.breadcrumbsCollection);
+        //             // console.log(BreadcrumbsComponent.staticCrumb);
+        //         }
+        //     });
+&nbsp;
+&nbsp;
+        // });
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    private getDisplayName(instruction: any)</span> {
+<span class="cstat-no" title="statement not covered" >        if (BreadcrumbsComponent.staticCrumb) {</span>
+<span class="cstat-no" title="statement not covered" >            let routeName = instruction.component.routeName;</span>
+<span class="cstat-no" title="statement not covered" >            if (BreadcrumbsComponent.staticCrumb.hasOwnProperty(routeName)) {</span>
+<span class="cstat-no" title="statement not covered" >                for (let param in BreadcrumbsComponent.staticCrumb[routeName].params) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (instruction.component.params.hasOwnProperty(param)</span>
+                        &amp;&amp; instruction.component.params[param].toString()
+                        === BreadcrumbsComponent.staticCrumb[routeName].params[param].toString()) {
+<span class="cstat-no" title="statement not covered" >                        return BreadcrumbsComponent.staticCrumb[routeName].displayName;</span>
+                    }
+                }
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        return instruction.component.routeData.get('displayName');</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    private getCrumbsRecursively(instruction: any)</span> {
+        // this.allInstructions.push(instruction);
+        // if (instruction.component.routeData.data.hasOwnProperty('parent')) {
+        //     let parentInstruction = this.router.generate(
+        //         [instruction.component.routeData.data.parent, instruction.component.params]
+        //     );
+        //     this.getCrumbsRecursively(parentInstruction);
+        // }
+&nbsp;
+        // return this.allInstructions;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    private _getLinkParams(instructions, until)</span>: string[] {</span>
+<span class="cstat-no" title="statement not covered" >        let linkParams = [];</span>
+<span class="cstat-no" title="statement not covered" >        instructions.forEach(<span class="fstat-no" title="function not covered" >(item, index)</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            let component = item.component;</span>
+<span class="cstat-no" title="statement not covered" >            let routePrefix: string;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (component.routeData.get('parent') &amp;&amp; index &lt; until) {</span>
+<span class="cstat-no" title="statement not covered" >                return;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (index &lt;= until) {</span>
+<span class="cstat-no" title="statement not covered" >                routePrefix = (index === 0) ? '/' : '';</span>
+<span class="cstat-no" title="statement not covered" >                linkParams.push(routePrefix + component.routeName);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (!this._isEmpty(component.params)) {</span>
+                    // linkParams.push(component.params);
+<span class="cstat-no" title="statement not covered" >                    let tmpParams: any = {};</span>
+<span class="cstat-no" title="statement not covered" >                    let skipParam: boolean;</span>
+<span class="cstat-no" title="statement not covered" >                    for (<span class="cstat-no" title="statement not covered" >let param </span>of item.component.params) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (item.component.params.hasOwnProperty(param)) {</span>
+<span class="cstat-no" title="statement not covered" >                            skipParam = false;</span>
+<span class="cstat-no" title="statement not covered" >                            for (<span class="cstat-no" title="statement not covered" >let urlParam </span>of item.urlParams) {</span>
+<span class="cstat-no" title="statement not covered" >                                if (urlParam.indexOf(param) === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                    skipParam = true;</span>
+<span class="cstat-no" title="statement not covered" >                                    break;</span>
+                                }
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (!skipParam) {</span>
+<span class="cstat-no" title="statement not covered" >                                tmpParams[param] = item.component.params[param];</span>
+                            }
+                        }
+&nbsp;
+                    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if (tmpParams) {</span>
+<span class="cstat-no" title="statement not covered" >                        linkParams.push(tmpParams);</span>
+                    }
+                    // console.log('tmp params: ----------------');
+                    // console.log(tmpParams);
+                }
+                // console.log('---- link params ========');
+                // console.log(linkParams);
+            }
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return linkParams;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    private _isEmpty(obj)</span> {
+<span class="cstat-no" title="statement not covered" >        for (let prop in obj) {</span>
+<span class="cstat-no" title="statement not covered" >            if (obj.hasOwnProperty(prop))</span>
+<span class="cstat-no" title="statement not covered" >                return false;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+    }
+&nbsp;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 23 2016 16:47:43 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

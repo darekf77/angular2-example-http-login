@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/shared/date/date.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">app/shared/date/</a> date.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.05% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/81</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20.69% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>12/58</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { DateFormat } from './date-format.enum';
+import { TranslateService } from 'ng2-translate/ng2-translate';
+&nbsp;
+@Injectable()
+export class DateService {
+&nbsp;
+<span class="fstat-no" title="function not covered" >    constructor(private <span class="cstat-no" title="statement not covered" >translate: TranslateService)</span></span> {
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    getDayOfWeek(n: Number)</span> {
+<span class="cstat-no" title="statement not covered" >        if (n === 0) <span class="cstat-no" title="statement not covered" >return this.translate.instant('days_of_week.sunday');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 1) <span class="cstat-no" title="statement not covered" >return this.translate.instant('days_of_week.monday');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 2) <span class="cstat-no" title="statement not covered" >return this.translate.instant('days_of_week.thuesday');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 3) <span class="cstat-no" title="statement not covered" >return this.translate.instant('days_of_week.wednesday');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 4) <span class="cstat-no" title="statement not covered" >return this.translate.instant('days_of_week.thursday');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 5) <span class="cstat-no" title="statement not covered" >return this.translate.instant('days_of_week.friday');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 6) <span class="cstat-no" title="statement not covered" >return this.translate.instant('days_of_week.saturday');</span></span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    getMonthOfYear(n: number)</span> {
+<span class="cstat-no" title="statement not covered" >        if (n === 0) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.january');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 1) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.february');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 2) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.march');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 3) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.april');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 4) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.may');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 5) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.june');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 6) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.july');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 7) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.august');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 8) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.september');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 9) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.october');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 10) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.november');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (n === 11) <span class="cstat-no" title="statement not covered" >return this.translate.instant('months_of_year.december');</span></span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    getWeekOfYear(date)</span> {
+<span class="cstat-no" title="statement not covered" >        let target = new Date(date.valueOf()),</span>
+            dayNumber = (date.getUTCDay() + 6) % 7,
+            firstThursday;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        target.setUTCDate(target.getUTCDate() - dayNumber + 3);</span>
+<span class="cstat-no" title="statement not covered" >        firstThursday = target.valueOf();</span>
+<span class="cstat-no" title="statement not covered" >        target.setUTCMonth(0, 1);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (target.getUTCDay() !== 4) {</span>
+<span class="cstat-no" title="statement not covered" >            target.setUTCMonth(0, 1 + ((4 - target.getUTCDay()) + 7) % 7);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return Math.ceil((firstThursday - target.getTime()) /</span>
+                (7 * 24 * 3600 * 1000)) + 1;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    getDayOfYear(date)</span> {
+<span class="cstat-no" title="statement not covered" >        let now = new Date();</span>
+<span class="cstat-no" title="statement not covered" >        let start = new Date(now.getFullYear(), 0, 0);</span>
+<span class="cstat-no" title="statement not covered" >        let diff = now.getTime() - start.getTime();</span>
+<span class="cstat-no" title="statement not covered" >        let oneDay = 1000 * 60 * 60 * 24;</span>
+<span class="cstat-no" title="statement not covered" >        return Math.floor(diff / oneDay);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    getDateInFormat(date: Date, <span class="cstat-no" title="statement not covered" >format: DateFormat = DateFormat.WEEKDAY_DAY__MONTH_YEAR)</span></span> {
+<span class="cstat-no" title="statement not covered" >        if (!date) <span class="cstat-no" title="statement not covered" >throw Error('Date should be defined');</span></span>
+<span class="cstat-no" title="statement not covered" >        if (format === DateFormat.WEEKDAY_DAY__MONTH_YEAR) {</span>
+<span class="cstat-no" title="statement not covered" >            let year = date.getFullYear();</span>
+<span class="cstat-no" title="statement not covered" >            let month = date.getMonth();</span>
+<span class="cstat-no" title="statement not covered" >            let monthOfYear = this.getMonthOfYear(month);</span>
+<span class="cstat-no" title="statement not covered" >            let day = date.getDate();</span>
+<span class="cstat-no" title="statement not covered" >            let dayW = date.getDay();</span>
+<span class="cstat-no" title="statement not covered" >            let dayOfWeek = this.getDayOfWeek(dayW);</span>
+<span class="cstat-no" title="statement not covered" >            return `${dayOfWeek} ${day} ${monthOfYear} ${year}`;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (format === DateFormat.YEARDAY_YEARWEEK) {</span>
+<span class="cstat-no" title="statement not covered" >            let day = this.getDayOfYear(date);</span>
+<span class="cstat-no" title="statement not covered" >            let week = this.getWeekOfYear(date);</span>
+<span class="cstat-no" title="statement not covered" >            let dayOfYearL = this.translate.instant('date_service.day_of_year');</span>
+<span class="cstat-no" title="statement not covered" >            let weekL = this.translate.instant('date_service.week');</span>
+<span class="cstat-no" title="statement not covered" >            return `${day} ${dayOfYearL}, ${week} ${weekL}`;</span>
+        }
+&nbsp;
+    }
+&nbsp;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 23 2016 16:47:43 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
