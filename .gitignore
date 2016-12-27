@@ -38,8 +38,6 @@ npm-debug.log
 *.log
 npm-debug.log*
 
-# Coverage #
-/coverage/
 
 # Typing #
 /src/typings/tsd/
