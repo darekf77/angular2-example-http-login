@@ -1,0 +1,10 @@
+<h6> &nbsp; &nbsp; login page</h6>
+<div bsModal #modal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body" id="modalBody">
+        <login-modal (formSubmit)="loginIntoSystem($event)"  [modal]="modal"  ></login-modal>
+      </div>
+    </div>
+  </div>
+</div>
