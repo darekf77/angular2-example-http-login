@@ -1,5 +1,7 @@
 {
   "resources": [],
+  "version": "v2",
+  "type": "angular-lib",
   "overrided": {
     "linkedFolders": [],
     "ignoreDepsPattern": [
@@ -74,5 +76,6 @@
     "angular2",
     "webpack",
     "typescript"
-  ]
+  ],
+  "private": true
 }
