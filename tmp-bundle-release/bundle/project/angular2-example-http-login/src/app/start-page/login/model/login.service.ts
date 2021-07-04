@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 
-import { Resource } from 'ng2-rest/ng2-rest';
+import { Resource } from 'ng2-rest';
 import { User } from './user';
 import { ENDPOINTS } from '../../../app.component';
 import { loginInController } from './mock';

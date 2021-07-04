@@ -6,7 +6,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 
 import { TranslateModule } from 'ng2-translate';
-import { Resource } from 'ng2-rest/ng2-rest';
+import { Resource } from 'ng2-rest';
 import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 

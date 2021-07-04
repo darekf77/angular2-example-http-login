@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed, async, inject } from '@angular/core/testing'
 import { By } from '@angular/platform-browser';
 import { HttpModule, JsonpModule, Http, Jsonp } from '@angular/http';
 
-import { Resource, MockingMode } from 'ng2-rest/ng2-rest';
+import { Resource, MockingMode } from 'ng2-rest';
 
 import { LoginService } from './login.service';
 import { User } from './user';

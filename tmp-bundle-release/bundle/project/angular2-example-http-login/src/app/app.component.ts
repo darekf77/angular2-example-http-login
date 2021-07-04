@@ -4,10 +4,10 @@
 import { Component, ViewEncapsulation, Inject, ViewContainerRef } from '@angular/core';
 
 import { TranslateService } from 'ng2-translate/ng2-translate';
-import { Resource, MockingMode, EurekaConfig } from 'ng2-rest/ng2-rest';
+import { Resource, MockingMode, EurekaConfig } from 'ng2-rest';
 
 import { AppState } from './app.service';
-import { Log, Level } from 'ng2-logger/ng2-logger';
+import { Log, Level } from 'ng2-logger';
 const log = Log.create('app component');
 
 

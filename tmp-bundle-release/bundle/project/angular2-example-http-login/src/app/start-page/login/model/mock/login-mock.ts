@@ -1,6 +1,6 @@
 import { User } from '../user';
 
-import { MockRequest, MockResponse } from 'ng2-rest/ng2-rest';
+import { MockRequest, MockResponse } from 'ng2-rest';
 
 export function loginInController(req: MockRequest<User>): MockResponse { // user: User, params
 

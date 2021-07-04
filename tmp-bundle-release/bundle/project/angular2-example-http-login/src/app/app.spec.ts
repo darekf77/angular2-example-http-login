@@ -22,7 +22,7 @@ import {
   TranslateService, TranslateLoader, TranslateStaticLoader, TranslateModule
 }
   from 'ng2-translate/ng2-translate';
-import { Resource } from 'ng2-rest/ng2-rest';
+import { Resource } from 'ng2-rest';
 import { ApplicationRef, ViewContainerRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppModule } from './app.module';

@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // third parties
-import { PostalCodeValidatorDirective } from 'ng2-rest/ng2-rest';
+import { PostalCodeValidatorDirective } from 'ng2-rest';
 import { TranslateModule } from 'ng2-translate';
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 
