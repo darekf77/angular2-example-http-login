@@ -380,6 +380,10 @@
   "bugs": {
     "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
   },
-  "private": false,
-  "lastBuildTagHash": "9ab341b36c0a8eff2f7c580352c6105e7db838cb"
+  "private": true,
+  "lastBuildTagHash": "9ab341b36c0a8eff2f7c580352c6105e7db838cb",
+  "engines": {
+    "node": ">= 4.2.1",
+    "npm": ">= 3"
+  }
 }
